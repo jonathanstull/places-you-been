@@ -40,8 +40,34 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 * _you used in your project_
 * _here_
 
-## Open Source statement
+## Specs
 
+* Create business logic that describes object functions for a list of places, place objects, and characteristics about those places
+
+## Test
+
+Describe: ListOfPlaces()
+  1. "It creates a list object to be filled with place objects"
+  Code:
+  ListOfPlaces();
+  Expected Output: undefined;
+
+  2. "It uses a constructor function to define place characteristics"
+  Code:
+  Place(location, landmarks, season);
+  Expected Output: undefined;
+
+  3. "It adds one place to the list of places"
+  Code:
+  ListOfPlaces(place);
+  Expected Output: ListOfPlaces(place) {place1: {name, location, landmarks, season}};
+  
+  4. "It adds one landmark to the list"
+  Code:
+  Landmarks.prototype.addLandmark(landmark1);
+  Expected Output: Landmarks[0] {landmark1: {name, type}};
+
+  5. 
 
 
 ## MIT License
