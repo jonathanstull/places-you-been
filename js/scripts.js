@@ -1,7 +1,21 @@
-// Business logic for Places
+// Business logic for ListOfPlaces
 
 function ListOfPlaces() {
   this.places = {};
+  this.placeId = 0;
+}
+
+ListOfPlaces.prototype.assignId = function() {
+  this.placeId += 1;
+  return this.placeId;
+}
+
+ListOfPlaces.prototype.addPlace = function(place) {
+  if (!place) {
+    return false;
+  }
+  place.id = this.assignId();
+  this.places[place.id] = place;
 }
 
 // Business logic for Place
@@ -20,7 +34,7 @@ function Landmark(name, type) {
 // Business logic for landmark
 
 Place.prototype.addLandmark = function(landmark) {
-  if (landmark.name === "") {
+  if (!landmark.name) {
     return false;
   }
   this.landmarks.push(landmark);
